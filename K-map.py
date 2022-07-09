@@ -14,4 +14,3 @@ def minterm_multiply(x,y):
         else:
             res.append(i)
     return res
-   
