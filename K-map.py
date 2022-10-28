@@ -27,9 +27,44 @@ def Kmap2(mt, nip):
     print()
     print("K-map done")
     if nip==1:
+        for each in ans:
+            print(*each)
+    elif nip==2:
         for i in range(2):
             for j in range(2):
                 if ans[i][j] == 1:
                     ansmx[i][j] = 0 
-            
-        
+                else:
+                    ansmx[i][j] = 1
+        for each in ansmx:
+            print(*each)
+    if ans==[[1,1],[1,1]]:
+        flag = 1 
+        op = '1'
+   
+    if flag==0:
+        for i in range(2):
+            if ans[i]==[1,1]:
+                if nip==1:
+                    op='A ' if i==1 else "A' "
+                elif nip==2:
+                    op="(A') " if i==1 else "(A) "
+                temp.extend([(i,0),(i,1)])
+    
+    if flag==0:
+        if ans[0][0]==1 and ans[1][0]==1:
+            if nip==1:
+                op=op+"B' "
+            elif nip==2:
+                op=op+"(B) "
+            temp.extend([(0,0),(1,0)])
+        elif ans[0][1]==1 and ans[1][1]==1:
+            if nip==1:
+                op=op+"B "
+            elif nip==2:
+                op=op+"(B') "
+            temp.extend([(0,1),(1,1)])
+    if nip==1:
+        vr=["A'B' ","A'B ","AB' ","AB "]
+    elif nip==2:
+        vr=["(A+B) ","(A+B') ","(A'+B) ","(A'+B') "]            
