@@ -1,4 +1,5 @@
 # K-map
+[![DOI](https://zenodo.org/badge/512220449.svg)](https://zenodo.org/badge/latestdoi/512220449)
 
 This is a program of solving Karnaugh Map(K-Map). This is a method of simplifying Boolean expressions. Here I have written code to solve or 2,3 and 4 variables but in real life problems circuits would have thousands of variables.
 
